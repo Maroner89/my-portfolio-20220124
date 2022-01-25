@@ -30,6 +30,8 @@
             <a href="book.php">book</a>
         </nav>
 
+        <div id="menu-btn" class="fas fa-bars"></div>
+
     </section>
     <!-- 헤더 섹션 끝 -->
 
