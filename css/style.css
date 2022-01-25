@@ -85,6 +85,111 @@ section {
     display: none;
 }
 
+.services .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+}
+
+.services .box-container .box {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--main-color);
+}
+
+.services .box-container .box:hover {
+    background: var(--black);
+}
+
+.services .box-container .box img {
+    height: 8rem;
+}
+
+.services .box-container .box h3 {
+    color: var(--white);
+    font-size: 1.7rem;
+    padding-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    background: url(../img/footer-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
+    /* CSS background-attachment 속성은 배경 이미지를 뷰포트 내에서 고정할지,
+    아니면 자신의 컨테이닝 블록과 함께 스크롤할지 지정합니다.*/
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+    /*
+     repeat = 반복되는 패턴을 나타내는 많은 열을 보다 간결한 형식으로
+    작성할 수 있도록 하는 트랙 목록의 반복된 조각을 나타냅니다.
+    
+     auto-fit: 그리드 항목을 배치한 후 빈 반복 트랙이 축소된다는 점을 제외하고
+    와 동일하게 작동합니다 . 빈 트랙은 인플로우 그리드 항목이 배치되거나
+    가로질러 있지 않은 트랙입니다.
+    (모든 트랙이 비어 있는 경우 모든 트랙이 축소될 수 있습니다.)
+    */
+}
+
+.footer .box-container .box h3 {
+    color: var(--white);
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.footer .box-container .box a {
+    color: var(--light-white);
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: block;
+}
+
+.footer .box-container .box a i {
+    color: var(--main-color);
+    padding-right: 0.5rem;
+    transition: 0.2s linear;
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 2rem;
+}
+
+.footer .credit {
+    text-align: center;
+    padding-top: 3rem;
+    margin-top: 3rem;
+    border-top: 0.1rem solid var(--light-white);
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.footer .credit span {
+    color: var(--main-color);
+}
+
+
 
 
 
@@ -118,6 +223,15 @@ section {
 
 @media (max-width:768px) {
 
+    #menu-btn {
+        display: inline-block;
+        transition: 0.2s linear;
+    }
+
+    #menu-btn.fa-times {
+        transform: rotate(180deg);
+    }
+
     .header .navbar {
         position: absolute;
         top: 99%;
@@ -126,6 +240,20 @@ section {
         background-color: var(--white);
         border-top: var(--border);
         padding: 2rem;
+        transition: 0.2s linear;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        /* CSS 클립 메이커
+        https://bennettfeely.com/clippy/ */
+    }
+
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navbar a {
+        display: block;
+        margin: 2rem;
+        text-align: center;
     }
 
 
